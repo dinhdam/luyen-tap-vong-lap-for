@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+    let fib = [];
+    fib[0] = 0;
+    fib[1] = 1;
+    for(i=2; i<=10; i++)
+    {
+        fib[i] = fib[i-2] + fib[i-1];
+        for(let x in fib){
+            if(x % 5 == 0){
+                alert(x);
+            }
+        }
+    }
+</script>
+</body>
+</html>

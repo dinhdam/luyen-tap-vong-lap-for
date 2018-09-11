@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let range = prompt("Nhập khoảng số");
+    count = 1;
+    let guess = prompt("Bạn đoán số mấy (Bạn chỉ có 3 lượt)");
+    result = Math.floor(Math.random() * Number(range));
+    console.log(result);
+    while(count < 3) {
+        if (guess == result) {
+            alert("Đúng rồi");
+            break;
+        } else {
+            alert("Đoán lại đi");
+            if (guess > result){
+                alert("Số bạn đoán lớn hơn kết quả");
+            }else{
+                alert("Số bạn đoán nhỏ hơn kết quả");
+            }
+            let retry = prompt("Bạn đoán số mấy");
+            guess = retry;
+            count++;
+        }
+    }
+</script>
+</body>
+</html>
